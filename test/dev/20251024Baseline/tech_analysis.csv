@@ -1,0 +1,4 @@
+symbol,current_price,annualized_return,total_return,sharpe_ratio,alpha,beta,volatility,max_drawdown,percent_from_high,percent_from_low,rsi,volume_ratio,high_52w,low_52w,sma_20,sma_50,data_points
+MSFT,520.56,78.85,32.57,3.08,20.79,0.72,18.48,-7.44,-6.13,35.88,53.56,0.70,554.54,383.11,517.47,511.68,124
+TSLA,448.98,142.78,53.74,1.94,4.19,1.96,52.59,-21.55,-4.62,65.81,56.26,1.30,470.75,270.78,438.70,396.04,124
+AAPL,259.58,53.77,23.20,1.70,-8.84,1.04,25.31,-8.34,-2.15,34.65,51.83,0.60,265.29,192.78,254.66,243.54,124
