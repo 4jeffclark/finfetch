@@ -20,14 +20,14 @@ echo.
 
 REM Test 1 - Basic screening with enhanced metrics (table format)
 echo [Test 1] Basic screening with enhanced metrics (table format)
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY > "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY > "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 1 failed - check test01-AAPL-GOOGL-365d-SPY.txt for details
     goto :error_exit
 )
 REM Also save as CSV
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY.csv" > "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY-errors.txt" 2>&1
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY.csv" > "%OUTPUT_DIR%\test01-AAPL-GOOGL-365d-SPY-errors.txt" 2>&1
 if errorlevel 1 (
     echo WARNING: Test 1 CSV generation failed - check test01-AAPL-GOOGL-365d-SPY-errors.txt
 ) else (
@@ -42,14 +42,14 @@ echo.
 
 REM Test 2 - Tech stocks vs QQQ benchmark with different time window
 echo [Test 2] Tech stocks vs QQQ benchmark with different time window
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ > "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ > "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 2 failed - check test02-AAPL-GOOGL-MSFT-180d-QQQ.txt for details
     goto :error_exit
 )
 REM Also save as CSV
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ.csv" > "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ-errors.txt" 2>&1
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ.csv" > "%OUTPUT_DIR%\test02-AAPL-GOOGL-MSFT-180d-QQQ-errors.txt" 2>&1
 if errorlevel 1 (
     echo WARNING: Test 2 CSV generation failed - check test02-AAPL-GOOGL-MSFT-180d-QQQ-errors.txt
 ) else (
@@ -64,14 +64,14 @@ echo.
 
 REM Test 3 - Short-term analysis with custom risk-free rate
 echo [Test 3] Short-term analysis with custom risk-free rate
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04 > "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04 > "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 3 failed - check test03-AAPL-GOOGL-90d-VTI-rfr004.txt for details
     goto :error_exit
 )
 REM Also save as CSV
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04 --format csv --output "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004.csv" > "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004-errors.txt" 2>&1
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 90 --benchmark VTI --risk-free-rate 0.04 --format csv --output "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004.csv" > "%OUTPUT_DIR%\test03-AAPL-GOOGL-90d-VTI-rfr004-errors.txt" 2>&1
 if errorlevel 1 (
     echo WARNING: Test 3 CSV generation failed - check test03-AAPL-GOOGL-90d-VTI-rfr004-errors.txt
 ) else (
@@ -86,14 +86,14 @@ echo.
 
 REM Test 4 - Long-term analysis with multiple stocks
 echo [Test 4] Long-term analysis with multiple stocks
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035 > "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035 > "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 4 failed - check test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035.txt for details
     goto :error_exit
 )
 REM Also save as CSV
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035 --format csv --output "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035.csv" > "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035-errors.txt" 2>&1
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --symbols MSFT --symbols TSLA --days 730 --benchmark SPY --risk-free-rate 0.035 --format csv --output "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035.csv" > "%OUTPUT_DIR%\test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035-errors.txt" 2>&1
 if errorlevel 1 (
     echo WARNING: Test 4 CSV generation failed - check test04-AAPL-GOOGL-MSFT-TSLA-730d-SPY-rfr0035-errors.txt
 ) else (
@@ -108,8 +108,8 @@ echo.
 
 REM Test 5 - CSV file output with comprehensive metrics
 echo [Test 5] CSV file output with comprehensive metrics
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY.csv"
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY.csv" > "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY-errors.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY.csv"
+finfetch --debug-level 1 screen --symbols AAPL --symbols GOOGL --days 365 --benchmark SPY --format csv --output "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY.csv" > "%OUTPUT_DIR%\test05-AAPL-GOOGL-365d-SPY-errors.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 5 failed
     goto :error_exit
@@ -124,8 +124,8 @@ echo.
 
 REM Test 6 - CSV output to different file with different parameters
 echo [Test 6] CSV output to different file with different parameters
-echo Command: python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols MSFT --symbols TSLA --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ.csv"
-python ../../../src/finfetch.py --debug-level 1 screen --symbols AAPL --symbols MSFT --symbols TSLA --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ.csv" > "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ-errors.txt" 2>&1
+echo Command: finfetch --debug-level 1 screen --symbols AAPL --symbols MSFT --symbols TSLA --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ.csv"
+finfetch --debug-level 1 screen --symbols AAPL --symbols MSFT --symbols TSLA --days 180 --benchmark QQQ --format csv --output "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ.csv" > "%OUTPUT_DIR%\test06-AAPL-MSFT-TSLA-180d-QQQ-errors.txt" 2>&1
 if errorlevel 1 (
     echo ERROR: Test 6 failed
     goto :error_exit
