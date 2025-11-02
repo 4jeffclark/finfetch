@@ -2,7 +2,9 @@
 
 ## Overview
 
-This document provides session-specific implementation details, file organization patterns, and operational guidelines for FinFetch development sessions. This complements the general AI working principles in `ai-principles.md`.
+This document provides detailed implementation patterns, file organization, and operational guidelines for FinFetch development. This is implementation guidance referenced from the [FinFetch Constitution](constitution.md) for detailed procedures and patterns.
+
+**Note**: For governance principles and non-negotiable rules, see the [FinFetch Constitution](constitution.md). This document contains implementation details and "how-to" guidance.
 
 ## File Organization Patterns
 
@@ -249,3 +251,4 @@ python -u helper-scripts\[script-name].py [parameters]
 - **Pattern consistency**: Established patterns can be followed for new features
 - **Historical context**: Previous decisions and rationale are preserved
 - **Test infrastructure**: Reusable test patterns and helper scripts available
+

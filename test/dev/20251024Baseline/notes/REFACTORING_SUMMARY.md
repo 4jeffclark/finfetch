@@ -9,9 +9,6 @@ Successfully refactored the session folder from `current-session` to `20251024Ba
 ```
 test/dev/20251024Baseline/
 ├── 01-polygon-integration-test.bat    # Test runner
-├── ai-context/                        # AI development context
-│   ├── ai-principles.md              # AI working principles
-│   └── work-pattern.md               # Development work patterns
 ├── helper-scripts/                    # Test helper scripts
 │   ├── create_test_config.py         # Configuration generator
 │   ├── run_polygon_test.py           # Test executor
@@ -24,6 +21,9 @@ test/dev/20251024Baseline/
 │   ├── SESSION_REFACTORING_NOTES.md
 │   └── REFACTORING_SUMMARY.md
 └── outputs/                          # Test output directory
+
+Note: AI development context files have been moved to .specify/memory/ 
+      (constitution.md and work-pattern.md) as part of speckit integration.
 ```
 
 ## 🔄 **Changes Made**

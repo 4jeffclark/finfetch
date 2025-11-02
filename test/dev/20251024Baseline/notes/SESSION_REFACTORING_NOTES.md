@@ -20,11 +20,12 @@ This document records the refactoring of the session folder from `current-sessio
 ### 3. Preserved Structure
 All existing files and folders were preserved during the rename:
 - `01-polygon-integration-test.bat` - Test runner
-- `ai-context/` - AI development context files
 - `helper-scripts/` - Test helper scripts
 - `inputs/` - Test input directory
 - `notes/` - Session notes and documentation
 - `outputs/` - Test output directory
+
+**Note**: AI development context files (`ai-context/`) were moved to `.specify/memory/` as part of speckit integration. See `.specify/memory/constitution.md` and `.specify/memory/work-pattern.md`.
 
 ## Session Context
 
@@ -44,10 +45,12 @@ Following the cellocity-backend pattern:
 
 ## Files Updated
 
-1. `test/dev/20251024Baseline/ai-context/work-pattern.md`
+1. Session documentation files updated to reflect new naming convention
    - Updated session examples
    - Updated naming pattern references
    - Updated context discovery instructions
+
+**Note**: AI development context files have since been moved to `.specify/memory/` as part of speckit integration (constitution.md and work-pattern.md).
 
 ## Impact
 

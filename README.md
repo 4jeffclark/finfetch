@@ -79,20 +79,16 @@ finfetch/
 
 ## Development
 
-This project follows the development patterns established in the cellocity-backend project, including:
+This project follows the development principles and patterns defined in the [FinFetch Constitution](.specify/memory/constitution.md). For detailed implementation patterns and workflow procedures, see the [Work Pattern Guide](.specify/memory/work-pattern.md).
 
+**Key Development Principles:**
 - **Structured Development Approach**: Design → User Approval → Implementation → Testing → Documentation
-- **Comprehensive Documentation**: All development work is documented for future reference
-- **Test-Driven Development**: Extensive testing at all levels
-- **Code Quality**: Consistent patterns and refactoring practices
+- **User-Driven Development**: User runs tests and provides results - never assume outcomes
+- **Start with Working Code**: Always begin with existing, working code patterns
+- **Self-Documenting Work**: All development work must be documented for future reference
+- **Test-Driven Development**: Tests must be written and validated before considering features complete
 
-### Development Workflow
-
-1. **Design Phase**: Create design documents in `test/dev/backlog/`
-2. **User Approval**: Wait for explicit user approval before implementation
-3. **Implementation**: Move designs to `test/dev/current-session/notes/` and implement
-4. **Testing**: Create test runners and validate functionality
-5. **Documentation**: Update implementation status and preserve test data
+For complete development workflow details, naming conventions, file organization patterns, and implementation procedures, refer to the [Work Pattern Guide](.specify/memory/work-pattern.md).
 
 ## Contributing
 

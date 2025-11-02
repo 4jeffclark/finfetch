@@ -39,14 +39,14 @@ finfetch/
 │   └── README.md                   # Documentation guide
 ├── test/dev/                       # Development structure
 │   ├── backlog/                     # Future feature designs
-│   └── current-session/            # Active development work
-│       ├── ai-context/             # AI development context
-│       │   ├── ai-principles.md    # AI working principles
-│       │   └── work-pattern.md     # Development work patterns
+│   └── [session-folder]/            # Active development work (named by date)
 │       ├── notes/                  # Session notes and designs
 │       ├── inputs/                 # Test inputs
 │       ├── outputs/                # Test outputs
 │       └── helper-scripts/         # Helper scripts
+├── .specify/memory/                 # Speckit governance and guidance
+│   ├── constitution.md             # Project constitution (non-negotiable principles)
+│   └── work-pattern.md             # Implementation patterns and procedures
 ├── setup.py                        # Package setup
 ├── requirements.txt                # Dependencies
 ├── pyproject.toml                  # Modern Python packaging
@@ -85,31 +85,19 @@ finfetch/
 - **Testing Framework**: pytest-based testing with coverage
 - **Code Quality**: Black, flake8, mypy for code quality
 - **Documentation**: Sphinx-based documentation system
-- **Development Patterns**: Following cellocity-backend patterns
+- **Development Patterns**: Governed by FinFetch Constitution and Work Pattern Guide (see `.specify/memory/`)
 
-## AI Development Principles
+## Development Principles
 
-The project follows the AI development principles established in cellocity-backend:
+The project follows the development principles defined in the [FinFetch Constitution](../.specify/memory/constitution.md). For detailed implementation patterns and workflow procedures, see the [Work Pattern Guide](../.specify/memory/work-pattern.md).
 
-### 1. Start with Working Code
-- All implementations follow established patterns
-- Reference similar functionality for consistency
-- Never reinvent what already works
+**Key Principles:**
+- **Start with Working Code**: Always begin with existing, working code patterns
+- **User-Driven Development Cycle**: User always runs tests and provides results; wait for explicit user approval
+- **Structured Development Approach**: Design → User Approval → Implementation → Testing → Documentation
+- **Self-Documenting Work**: Complete historical record of all development work
 
-### 2. User-Driven Development Cycle
-- User always runs tests and provides results
-- Wait for user feedback before proceeding
-- Use user results to guide debugging and refinement
-
-### 3. Structured Development Approach
-- Use existing infrastructure rather than creating new patterns
-- Keep all work within established frameworks
-- Follow design → user approval → implementation cycle
-
-### 4. Self-Documenting Work
-- Complete historical record of all development work
-- Comprehensive documentation for future reference
-- Consistent naming conventions throughout
+For complete development principles and governance rules, refer to the [FinFetch Constitution](../.specify/memory/constitution.md).
 
 ## Configuration and Setup
 
@@ -171,25 +159,16 @@ finfetch validate -s AAPL -i data.json
 
 ## Development Workflow
 
-### 1. Feature Development
-- Create design documents in `test/dev/backlog/`
-- Wait for user approval before implementation
-- Move designs to `test/dev/current-session/notes/` when approved
-- Implement following established patterns
-- Create comprehensive tests
-- Update documentation
+Development workflow follows the principles defined in the [FinFetch Constitution](../.specify/memory/constitution.md). For detailed procedures, naming conventions, and implementation patterns, see the [Work Pattern Guide](../.specify/memory/work-pattern.md).
 
-### 2. Testing
-- Use test runners in `test/dev/current-session/`
-- Follow self-documentation patterns
-- Preserve test data for future reference
-- Wait for user feedback before proceeding
+**High-level Workflow:**
+1. **Design Phase**: Create design documents in `test/dev/backlog/`
+2. **User Approval**: Wait for explicit user approval before implementation
+3. **Implementation**: Move designs to session `notes/` and implement following design
+4. **Testing**: Create structured test runners and validate functionality (user runs tests)
+5. **Documentation**: Update implementation status and preserve test data
 
-### 3. Documentation
-- Maintain comprehensive documentation
-- Update implementation status
-- Preserve decision rationale
-- Enable easy future reference
+For complete workflow details, refer to the [Work Pattern Guide](../.specify/memory/work-pattern.md).
 
 ## Next Steps
 
