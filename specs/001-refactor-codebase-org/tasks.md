@@ -1,6 +1,6 @@
 # Tasks: Codebase Organization Refactoring
 
-**Input**: Design documents from `/specs/001-refactor-codebase-org/`
+**Input**: Design documents from `specs/001-refactor-codebase-org/`
 **Prerequisites**: plan.md ✅, spec.md ✅, research.md ✅, data-model.md ✅, quickstart.md ✅
 
 **Tests**: No test tasks included (organizational refactoring only - existing tests verify functionality)
