@@ -10,8 +10,8 @@ setup(
     description="Financial Data Collection, Aggregation and Processing Utilities",
     author="FinFetch Development Team",
     author_email="dev@finfetch.com",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=["finfetch", "finfetch.analysis", "finfetch.config", "finfetch.core", "finfetch.processors", "finfetch.sources", "finfetch.utils"],
+    package_dir={"finfetch": "src"},
     python_requires=">=3.8",
     install_requires=[
         "click>=8.0.0",
