@@ -78,7 +78,7 @@ Repository = "https://github.com/4jeffclark/finfetch"
 Issues = "https://github.com/4jeffclark/finfetch/issues"
 
 [tool.setuptools]
-packages = ["finfetch", "finfetch.analysis", "finfetch.config", "finfetch.core", "finfetch.processors", "finfetch.sources", "finfetch.utils"]
+packages = ["finfetch", "finfetch.analysis", "finfetch.config", "finfetch.core", "finfetch.interfaces", "finfetch.processors", "finfetch.sources", "finfetch.utils"]
 
 [tool.setuptools.package-dir]
 "finfetch" = "src"
